@@ -6,6 +6,8 @@ When operating on a large iterable resource, it's often desireable to not have t
 
 Buffered_Iterable is a utility to help chunk up sections of a large iterable. Here's an example using a Doctrine ORM query as the target:
 
+```php
+	<?php
 	/*
 	* We initialize a Buffered_Iterable with a closure containing a query. The $interval and $offset
 	* fields are calculated for you. The 500 as the second parameter to the constructor says 'chunk it in intervals of 500'
@@ -23,3 +25,4 @@ Buffered_Iterable is a utility to help chunk up sections of a large iterable. He
 	foreach ($every_user as $user){
 		$user->sendEmail("Exciting updates to our service!");
 	}
+````
